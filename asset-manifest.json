@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fa6e7691.css",
-    "main.js": "/static/js/main.9a1072cc.js",
+    "main.css": "/static/css/main.cc39f089.css",
+    "main.js": "/static/js/main.d0768413.js",
     "static/media/pink_moon.png": "/static/media/pink_moon.9750976c5231ef256708.png",
     "static/media/yellow_moon.png": "/static/media/yellow_moon.fa0d3edd76d4c720141d.png",
     "static/media/photo-1557804506-669a67965ba0.png": "/static/media/photo-1557804506-669a67965ba0.358c95ee43bab3204d1e.png",
@@ -32,6 +32,7 @@
     "static/media/main_logo.svg": "/static/media/main_logo.fc08b1e32b750077898eff4df95a2e52.svg",
     "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.ada6e6df937f7e5e8b79.woff2",
     "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.c1210e5ebe4344da5083.woff2",
+    "static/media/my_image.jpg": "/static/media/my_image.bed5612968cef5f9bfd4.jpg",
     "static/media/KalamehWebFaNum-Bold.woff": "/static/media/KalamehWebFaNum-Bold.ff87950336042088579c.woff",
     "static/media/KalamehWebFaNum-Medium.woff": "/static/media/KalamehWebFaNum-Medium.530040fa60edd99ec4ac.woff",
     "static/media/KalamehWebFaNum-ExtraBold.woff": "/static/media/KalamehWebFaNum-ExtraBold.183210d00a95d38207d4.woff",
@@ -67,11 +68,11 @@
     "static/media/moon.svg": "/static/media/moon.7d2bb1c01635b9821bd4b36769189a41.svg",
     "static/media/sun.svg": "/static/media/sun.c546c0318b9d325bfa935524589fba54.svg",
     "index.html": "/index.html",
-    "main.fa6e7691.css.map": "/static/css/main.fa6e7691.css.map",
-    "main.9a1072cc.js.map": "/static/js/main.9a1072cc.js.map"
+    "main.cc39f089.css.map": "/static/css/main.cc39f089.css.map",
+    "main.d0768413.js.map": "/static/js/main.d0768413.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa6e7691.css",
-    "static/js/main.9a1072cc.js"
+    "static/css/main.cc39f089.css",
+    "static/js/main.d0768413.js"
   ]
 }
