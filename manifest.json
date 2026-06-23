@@ -1,6 +1,6 @@
 {
-  "short_name": "Challenge",
-  "name": "Challenge by M",
+  "short_name": "حسین موسوی",
+  "name": "حسین موسوی | طراح و برنامه‌نویس",
   "icons": [
     {
       "src": "favicon.ico",
@@ -9,12 +9,14 @@
     },
     {
       "src": "apple-icon.png",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "sizes": "76x76",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "lang": "fa",
+  "dir": "rtl",
+  "theme_color": "#4f46e5",
+  "background_color": "#0f172a"
 }

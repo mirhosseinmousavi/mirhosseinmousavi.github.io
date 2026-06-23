@@ -1,1 +1,393 @@
-<!doctype html><html lang="en" class="dark"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="shortcut icon" href="/favicon.ico"/><link rel="apple-touch-icon" sizes="76x76" href="/apple-icon.png"/><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/css/normalize.min.css"/><link rel="stylesheet" href="/css/swiper.min.css"/><link rel="stylesheet" href="/style.css"/><title>حسین موسوی | طراح و برنامه نویس</title><style>.bg-blue-600{background:#2563eb;color:#fff}</style><script defer="defer" src="/static/js/main.9182f146.js"></script><link href="/static/css/main.cc39f089.css" rel="stylesheet"></head><body class="text-blueGray-700 antialiased"><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script src="/js/jquery.min.js"></script><script src="/js/swiper.min.js"></script><script src="/index.js"></script></body></html>
+<!doctype html>
+<html lang="fa" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#4f46e5" />
+  <title>حسین موسوی | طراح و برنامه‌نویس</title>
+  <meta name="description" content="رزومه حسین موسوی — طراح و برنامه‌نویس سایت. توسعه بک‌اند با Go، پایگاه داده، Redis، RabbitMQ و RestAPI." />
+  <meta name="author" content="Hossein Mousavi" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="حسین موسوی | طراح و برنامه‌نویس" />
+  <meta property="og:description" content="رزومه حسین موسوی — توسعه بک‌اند با Go، پایگاه داده، Redis، RabbitMQ و RestAPI." />
+  <meta property="og:image" content="assets/img/profile.jpg" />
+
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="76x76" href="apple-icon.png" />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Avoid theme flash: set class before paint -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (saved === "dark" || (!saved && prefersDark)) {
+          document.documentElement.classList.add("dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Tailwind (Play CDN — zero build) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Kalameh", "system-ui", "sans-serif"],
+          },
+          colors: {
+            brand: {
+              50: "#eef2ff", 100: "#e0e7ff", 200: "#c7d2fe", 300: "#a5b4fc",
+              400: "#818cf8", 500: "#6366f1", 600: "#4f46e5", 700: "#4338ca",
+              800: "#3730a3", 900: "#312e81",
+            },
+          },
+          keyframes: {
+            "fade-up": {
+              "0%": { opacity: "0", transform: "translateY(24px)" },
+              "100%": { opacity: "1", transform: "translateY(0)" },
+            },
+            "float": {
+              "0%,100%": { transform: "translateY(0)" },
+              "50%": { transform: "translateY(-10px)" },
+            },
+          },
+          animation: {
+            "fade-up": "fade-up 0.7s cubic-bezier(0.22,1,0.36,1) both",
+            "float": "float 6s ease-in-out infinite",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* ---- Kalameh font (local, hosted in repo) ---- */
+    @font-face { font-family:"Kalameh"; font-weight:200; font-display:swap; src:url("assets/fonts/Kalameh-ExtraLight.woff2") format("woff2"), url("assets/fonts/Kalameh-ExtraLight.woff") format("woff"); }
+    @font-face { font-family:"Kalameh"; font-weight:300; font-display:swap; src:url("assets/fonts/Kalameh-Light.woff2") format("woff2"), url("assets/fonts/Kalameh-Light.woff") format("woff"); }
+    @font-face { font-family:"Kalameh"; font-weight:400; font-display:swap; src:url("assets/fonts/Kalameh-Regular.woff2") format("woff2"), url("assets/fonts/Kalameh-Regular.woff") format("woff"); }
+    @font-face { font-family:"Kalameh"; font-weight:500; font-display:swap; src:url("assets/fonts/Kalameh-Medium.woff2") format("woff2"), url("assets/fonts/Kalameh-Medium.woff") format("woff"); }
+    @font-face { font-family:"Kalameh"; font-weight:600; font-display:swap; src:url("assets/fonts/Kalameh-SemiBold.woff2") format("woff2"), url("assets/fonts/Kalameh-SemiBold.woff") format("woff"); }
+    @font-face { font-family:"Kalameh"; font-weight:700; font-display:swap; src:url("assets/fonts/Kalameh-Bold.woff2") format("woff2"), url("assets/fonts/Kalameh-Bold.woff") format("woff"); }
+    @font-face { font-family:"Kalameh"; font-weight:800; font-display:swap; src:url("assets/fonts/Kalameh-ExtraBold.woff2") format("woff2"), url("assets/fonts/Kalameh-ExtraBold.woff") format("woff"); }
+    @font-face { font-family:"Kalameh"; font-weight:900; font-display:swap; src:url("assets/fonts/Kalameh-Black.woff2") format("woff2"), url("assets/fonts/Kalameh-Black.woff") format("woff"); }
+
+    html { font-family: "Kalameh", system-ui, sans-serif; }
+
+    /* Reveal-on-scroll: start hidden, animate in when .in-view added */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
+    .reveal.in-view { opacity: 1; transform: none; }
+
+    /* Decorative dotted grid */
+    .bg-grid {
+      background-image: radial-gradient(currentColor 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+
+    ::selection { background: #6366f1; color: #fff; }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-thumb { background: #c7d2fe; border-radius: 9999px; }
+    .dark ::-webkit-scrollbar-thumb { background: #3730a3; }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-700 antialiased dark:bg-slate-950 dark:text-slate-300 transition-colors duration-300">
+
+  <!-- ================= NAVBAR ================= -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <nav class="mx-auto max-w-6xl px-4">
+      <div id="nav-inner" class="mt-3 flex items-center justify-between rounded-2xl px-4 py-3 transition-all duration-300">
+        <!-- Brand -->
+        <a href="#home" class="flex items-center gap-3 group">
+          <span class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 text-white font-extrabold text-lg shadow-lg shadow-brand-500/30">ح</span>
+          <span class="text-lg font-bold text-slate-800 dark:text-white">حسین موسوی</span>
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="hidden md:flex items-center gap-1 text-sm font-medium">
+          <li><a href="#about" class="rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-brand-600 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white transition">درباره من</a></li>
+          <li><a href="#skills" class="rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-brand-600 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white transition">مهارت‌ها</a></li>
+          <li><a href="#contact" class="rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-brand-600 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white transition">ارتباط</a></li>
+        </ul>
+
+        <div class="flex items-center gap-2">
+          <!-- Theme toggle -->
+          <button id="theme-toggle" type="button" aria-label="تغییر تم" class="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-600 hover:text-brand-600 hover:border-brand-300 dark:border-white/10 dark:bg-white/5 dark:text-slate-300 dark:hover:text-white transition">
+            <svg class="h-5 w-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.36 6.36-1.42-1.42M7.05 7.05 5.64 5.64m12.72 0-1.41 1.41M7.05 16.95l-1.41 1.41M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/></svg>
+            <svg class="h-5 w-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+          </button>
+
+          <a href="mailto:mirhosseinmousavi42@gmail.com" class="hidden sm:inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:-translate-y-0.5 transition">
+            تماس بگیرید
+          </a>
+
+          <!-- Mobile menu button -->
+          <button id="menu-btn" type="button" aria-label="منو" class="md:hidden grid h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden mt-2 rounded-2xl border border-slate-200 bg-white/90 p-2 backdrop-blur dark:border-white/10 dark:bg-slate-900/90">
+        <a href="#about" class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/5">درباره من</a>
+        <a href="#skills" class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/5">مهارت‌ها</a>
+        <a href="#contact" class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/5">راه‌های ارتباطی</a>
+        <a href="mailto:mirhosseinmousavi42@gmail.com" class="mt-1 block rounded-lg bg-brand-600 px-4 py-3 text-center text-sm font-semibold text-white">ارسال ایمیل</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section id="home" class="relative overflow-hidden pt-36 pb-24 sm:pt-44 sm:pb-32">
+      <!-- background decorations -->
+      <div class="pointer-events-none absolute inset-0 -z-10">
+        <div class="absolute inset-0 bg-grid text-slate-200/70 dark:text-white/[0.06] [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]"></div>
+        <div class="absolute -top-24 right-1/4 h-72 w-72 rounded-full bg-brand-400/30 blur-3xl dark:bg-brand-600/20"></div>
+        <div class="absolute top-10 left-1/4 h-72 w-72 rounded-full bg-violet-400/30 blur-3xl dark:bg-violet-700/20"></div>
+      </div>
+
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="grid items-center gap-12 md:grid-cols-2">
+          <!-- text -->
+          <div class="text-center md:text-right reveal">
+            <span class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-4 py-1.5 text-sm font-medium text-brand-700 dark:border-brand-500/20 dark:bg-brand-500/10 dark:text-brand-300">
+              <span class="relative flex h-2 w-2">
+                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                <span class="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+              </span>
+              آماده‌ی همکاری
+            </span>
+
+            <h1 class="mt-6 text-4xl font-black leading-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white">
+              سلام، من <span class="bg-gradient-to-l from-brand-500 to-violet-500 bg-clip-text text-transparent">حسین موسوی</span> هستم
+            </h1>
+
+            <p class="mt-4 text-xl font-semibold text-slate-600 dark:text-slate-300">
+              طراح و برنامه‌نویس سایت
+            </p>
+
+            <p class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-slate-500 dark:text-slate-400 md:mx-0">
+              مدتی هست در زمینه طراحی و برنامه‌نویسی سایت فعالیت می‌کنم؛ هدفم پیشرفت روزافزون در این زمینه و تحویل به‌موقع و باکیفیت پروژه‌هاست.
+            </p>
+
+            <div class="mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start">
+              <a href="mailto:mirhosseinmousavi42@gmail.com" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:-translate-y-0.5 transition">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z"/></svg>
+                ارسال ایمیل
+              </a>
+              <a href="tel:09912485006" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3.5 text-sm font-semibold text-slate-700 hover:border-brand-300 hover:text-brand-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-200 dark:hover:text-white transition">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 0 1 2-2h2.28a1 1 0 0 1 .95.68l1 3a1 1 0 0 1-.5 1.2L7.5 9.1a11 11 0 0 0 5.4 5.4l1.22-1.23a1 1 0 0 1 1.2-.5l3 1a1 1 0 0 1 .68.95V17a2 2 0 0 1-2 2A14 14 0 0 1 3 5Z"/></svg>
+                تماس تلفنی
+              </a>
+            </div>
+          </div>
+
+          <!-- photo -->
+          <div class="flex justify-center reveal" style="transition-delay:.15s">
+            <div class="relative animate-float">
+              <div class="absolute -inset-4 rounded-full bg-gradient-to-tr from-brand-500 to-violet-500 opacity-30 blur-2xl"></div>
+              <div class="relative rounded-full bg-gradient-to-tr from-brand-500 to-violet-500 p-1.5 shadow-2xl">
+                <img src="assets/img/profile.jpg" alt="حسین موسوی" class="h-56 w-56 rounded-full object-cover sm:h-72 sm:w-72 ring-4 ring-white dark:ring-slate-900" />
+              </div>
+              <span class="absolute -bottom-2 right-4 rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-lg dark:bg-slate-800 dark:text-slate-200">
+                طرح و پیاده‌ساز سایت
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-5xl px-4">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="text-sm font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">معرفی</p>
+          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl dark:text-white">درباره من</h2>
+        </div>
+
+        <div class="reveal mt-12 overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-sm sm:p-12 dark:border-white/10 dark:bg-white/[0.03]">
+          <p class="text-lg leading-loose text-slate-600 dark:text-slate-300">
+            سلام، من <span class="font-bold text-slate-900 dark:text-white">حسین موسوی</span> هستم. مدتی هست در زمینه طراحی و برنامه‌نویسی سایت فعالیت می‌کنم. هدفم این هست که روز به روز بتونم در این زمینه پیشرفت کنم و به همنوعانم کمک کنم، و در کنار آن کارهایی که بهم سپرده می‌شه را با کیفیت خوب و زمان‌بندی مناسب تحویل بدم.
+          </p>
+
+          <div class="mt-10 grid gap-4 sm:grid-cols-3">
+            <div class="rounded-2xl bg-slate-50 p-5 text-center dark:bg-white/5">
+              <p class="text-3xl font-black text-brand-600 dark:text-brand-400">Go</p>
+              <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">زبان اصلی بک‌اند</p>
+            </div>
+            <div class="rounded-2xl bg-slate-50 p-5 text-center dark:bg-white/5">
+              <p class="text-3xl font-black text-brand-600 dark:text-brand-400">Back‑End</p>
+              <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">تمرکز تخصصی</p>
+            </div>
+            <div class="rounded-2xl bg-slate-50 p-5 text-center dark:bg-white/5">
+              <p class="text-3xl font-black text-brand-600 dark:text-brand-400">On‑Time</p>
+              <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">تحویل به‌موقع</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="relative py-20 sm:py-28">
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="text-sm font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">تخصص‌ها</p>
+          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl dark:text-white">کارهای ارائه‌شده توسط من</h2>
+          <p class="mt-4 text-slate-500 dark:text-slate-400">لیستی از کارهایی که در آن‌ها فعالیت دارم به شرح زیر هست</p>
+        </div>
+
+        <div id="skills-grid" class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- cards injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="relative overflow-hidden py-20 sm:py-28">
+      <div class="pointer-events-none absolute inset-0 -z-10">
+        <div class="absolute bottom-0 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-brand-400/20 blur-3xl dark:bg-brand-700/20"></div>
+      </div>
+
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="text-sm font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">ارتباط</p>
+          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl dark:text-white">راه‌های ارتباطی</h2>
+          <p class="mt-4 text-slate-500 dark:text-slate-400">از طریق راه‌های زیر با من در ارتباط باشید</p>
+        </div>
+
+        <div class="mt-14 grid gap-6 md:grid-cols-3">
+          <!-- Email -->
+          <a href="mailto:mirhosseinmousavi42@gmail.com" class="reveal group rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-xl dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-brand-500/40">
+            <div class="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lg shadow-brand-500/30 transition group-hover:scale-110">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z"/></svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-slate-900 dark:text-white">آدرس ایمیل</h3>
+            <p dir="ltr" class="mt-2 text-sm text-slate-500 group-hover:text-brand-600 dark:text-slate-400 dark:group-hover:text-brand-400">mirhosseinmousavi42@gmail.com</p>
+          </a>
+
+          <!-- Phone -->
+          <a href="tel:09912485006" class="reveal group rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-xl dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-brand-500/40" style="transition-delay:.1s">
+            <div class="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lg shadow-brand-500/30 transition group-hover:scale-110">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 0 1 2-2h2.28a1 1 0 0 1 .95.68l1 3a1 1 0 0 1-.5 1.2L7.5 9.1a11 11 0 0 0 5.4 5.4l1.22-1.23a1 1 0 0 1 1.2-.5l3 1a1 1 0 0 1 .68.95V17a2 2 0 0 1-2 2A14 14 0 0 1 3 5Z"/></svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-slate-900 dark:text-white">شماره تماس</h3>
+            <p dir="ltr" class="mt-2 text-sm text-slate-500 group-hover:text-brand-600 dark:text-slate-400 dark:group-hover:text-brand-400">0991 248 5006</p>
+          </a>
+
+          <!-- Location -->
+          <div class="reveal group rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-xl dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-brand-500/40" style="transition-delay:.2s">
+            <div class="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lg shadow-brand-500/30 transition group-hover:scale-110">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-5.33-7-11a7 7 0 1 1 14 0c0 5.67-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-slate-900 dark:text-white">آدرس</h3>
+            <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">تهران، ایران‌خودرو</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-slate-200 py-10 dark:border-white/10">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 sm:flex-row">
+      <div class="flex items-center gap-3">
+        <span class="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-brand-500 to-violet-600 text-white font-extrabold shadow-lg shadow-brand-500/30">ح</span>
+        <span class="font-bold text-slate-800 dark:text-white">حسین موسوی</span>
+      </div>
+      <p class="text-sm text-slate-500 dark:text-slate-400">طراحی و توسعه با ❤️ — تمامی حقوق محفوظ است.</p>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    // ---- Skills data ----
+    const skills = [
+      {
+        title: "طراحی اختصاصی بک‌اند",
+        tags: ["زبان Go"],
+        icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>',
+      },
+      {
+        title: "نگهداری موقت دیتا",
+        tags: ["سرویس کش", "Redis"],
+        icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M13 2 4.5 12.5h6L11 22l8.5-10.5h-6L13 2Z"/>',
+      },
+      {
+        title: "نگهداری دائمی دیتا",
+        tags: ["پایگاه داده رابطه‌ای", "غیررابطه‌ای"],
+        icon: '<ellipse cx="12" cy="5" rx="8" ry="3"/><path stroke-linecap="round" stroke-linejoin="round" d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/>',
+      },
+      {
+        title: "استفاده از RestAPI",
+        tags: ["ارتباط با سرویس‌های خارجی"],
+        icon: '<circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
+      },
+      {
+        title: "RabbitMQ و Redis",
+        tags: ["ارتباط میان سرویس‌های داخلی"],
+        icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M4 7h11l-3-3m3 3-3 3M20 17H9l3-3m-3 3 3 3"/>',
+      },
+    ];
+
+    const grid = document.getElementById("skills-grid");
+    grid.innerHTML = skills.map((s, i) => `
+      <div class="reveal group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1.5 hover:border-brand-300 hover:shadow-2xl dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-brand-500/40" style="transition-delay:${i * 0.08}s">
+        <div class="absolute -left-10 -top-10 h-32 w-32 rounded-full bg-brand-400/10 blur-2xl transition group-hover:bg-brand-400/20"></div>
+        <div class="relative">
+          <div class="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lg shadow-brand-500/30 transition group-hover:scale-110">
+            <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">${s.icon}</svg>
+          </div>
+          <h3 class="mt-6 text-xl font-bold text-slate-900 dark:text-white">${s.title}</h3>
+          <div class="mt-4 flex flex-wrap gap-2">
+            ${s.tags.map(t => `<span class="rounded-full bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700 dark:bg-brand-500/10 dark:text-brand-300">${t}</span>`).join("")}
+          </div>
+        </div>
+      </div>
+    `).join("");
+
+    // ---- Theme toggle ----
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      const isDark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+
+    // ---- Mobile menu ----
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+    mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => mobileMenu.classList.add("hidden")));
+
+    // ---- Navbar background on scroll ----
+    const navInner = document.getElementById("nav-inner");
+    const onScroll = () => {
+      if (window.scrollY > 20) {
+        navInner.classList.add("border", "border-slate-200/70", "bg-white/80", "shadow-lg", "backdrop-blur-md", "dark:border-white/10", "dark:bg-slate-900/70");
+      } else {
+        navInner.classList.remove("border", "border-slate-200/70", "bg-white/80", "shadow-lg", "backdrop-blur-md", "dark:border-white/10", "dark:bg-slate-900/70");
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    // ---- Reveal on scroll ----
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add("in-view"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
