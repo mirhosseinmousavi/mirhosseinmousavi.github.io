@@ -1,6 +1,6 @@
 {
-  "short_name": "حسین موسوی",
-  "name": "حسین موسوی | طراح و برنامه‌نویس",
+  "short_name": "M. H. Mousavi",
+  "name": "Mir Hossein Mousavi | Backend Developer",
   "icons": [
     {
       "src": "favicon.ico",
@@ -15,8 +15,8 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "lang": "fa",
-  "dir": "rtl",
+  "lang": "en",
+  "dir": "ltr",
   "theme_color": "#4f46e5",
   "background_color": "#0f172a"
 }

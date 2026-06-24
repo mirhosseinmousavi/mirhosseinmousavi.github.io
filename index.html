@@ -1,17 +1,17 @@
 <!doctype html>
-<html lang="fa" dir="rtl" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#4f46e5" />
-  <title>حسین موسوی | طراح و برنامه‌نویس</title>
-  <meta name="description" content="رزومه حسین موسوی — طراح و برنامه‌نویس سایت. توسعه بک‌اند با Go، پایگاه داده، Redis، RabbitMQ و RestAPI." />
-  <meta name="author" content="Hossein Mousavi" />
+  <title>Mir Hossein Mousavi | Backend Developer</title>
+  <meta name="description" content="Mir Hossein Mousavi — Backend Developer with 5+ years building scalable, high-performance systems in Go and Node.js. Microservices, gRPC, Elasticsearch, Redis, Docker." />
+  <meta name="author" content="Mir Hossein Mousavi" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="حسین موسوی | طراح و برنامه‌نویس" />
-  <meta property="og:description" content="رزومه حسین موسوی — توسعه بک‌اند با Go، پایگاه داده، Redis، RabbitMQ و RestAPI." />
+  <meta property="og:title" content="Mir Hossein Mousavi | Backend Developer" />
+  <meta property="og:description" content="Backend Developer building scalable, high-performance systems with Go, Node.js, gRPC microservices, Elasticsearch and Redis." />
   <meta property="og:image" content="assets/img/profile.jpg" />
 
   <link rel="shortcut icon" href="favicon.ico" />
@@ -31,6 +31,11 @@
     })();
   </script>
 
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
   <!-- Tailwind (Play CDN — zero build) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -39,7 +44,7 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ["Kalameh", "system-ui", "sans-serif"],
+            sans: ["Inter", "system-ui", "sans-serif"],
           },
           colors: {
             brand: {
@@ -68,17 +73,7 @@
   </script>
 
   <style>
-    /* ---- Kalameh font (local, hosted in repo) ---- */
-    @font-face { font-family:"Kalameh"; font-weight:200; font-display:swap; src:url("assets/fonts/Kalameh-ExtraLight.woff2") format("woff2"), url("assets/fonts/Kalameh-ExtraLight.woff") format("woff"); }
-    @font-face { font-family:"Kalameh"; font-weight:300; font-display:swap; src:url("assets/fonts/Kalameh-Light.woff2") format("woff2"), url("assets/fonts/Kalameh-Light.woff") format("woff"); }
-    @font-face { font-family:"Kalameh"; font-weight:400; font-display:swap; src:url("assets/fonts/Kalameh-Regular.woff2") format("woff2"), url("assets/fonts/Kalameh-Regular.woff") format("woff"); }
-    @font-face { font-family:"Kalameh"; font-weight:500; font-display:swap; src:url("assets/fonts/Kalameh-Medium.woff2") format("woff2"), url("assets/fonts/Kalameh-Medium.woff") format("woff"); }
-    @font-face { font-family:"Kalameh"; font-weight:600; font-display:swap; src:url("assets/fonts/Kalameh-SemiBold.woff2") format("woff2"), url("assets/fonts/Kalameh-SemiBold.woff") format("woff"); }
-    @font-face { font-family:"Kalameh"; font-weight:700; font-display:swap; src:url("assets/fonts/Kalameh-Bold.woff2") format("woff2"), url("assets/fonts/Kalameh-Bold.woff") format("woff"); }
-    @font-face { font-family:"Kalameh"; font-weight:800; font-display:swap; src:url("assets/fonts/Kalameh-ExtraBold.woff2") format("woff2"), url("assets/fonts/Kalameh-ExtraBold.woff") format("woff"); }
-    @font-face { font-family:"Kalameh"; font-weight:900; font-display:swap; src:url("assets/fonts/Kalameh-Black.woff2") format("woff2"), url("assets/fonts/Kalameh-Black.woff") format("woff"); }
-
-    html { font-family: "Kalameh", system-ui, sans-serif; }
+    html { font-family: "Inter", system-ui, sans-serif; }
 
     /* Reveal-on-scroll: start hidden, animate in when .in-view added */
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
@@ -107,30 +102,34 @@
       <div id="nav-inner" class="mt-3 flex items-center justify-between rounded-2xl px-4 py-3 transition-all duration-300">
         <!-- Brand -->
         <a href="#home" class="flex items-center gap-3 group">
-          <span class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 text-white font-extrabold text-lg shadow-lg shadow-brand-500/30">ح</span>
-          <span class="text-lg font-bold text-slate-800 dark:text-white">حسین موسوی</span>
+          <span class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 text-white font-extrabold text-base shadow-lg shadow-brand-500/30">MH</span>
+          <span class="text-lg font-bold text-slate-800 dark:text-white">Mir Hossein Mousavi</span>
         </a>
 
         <!-- Desktop links -->
         <ul class="hidden md:flex items-center gap-1 text-sm font-medium">
-          <li><a href="#about" class="rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-brand-600 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white transition">درباره من</a></li>
-          <li><a href="#skills" class="rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-brand-600 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white transition">مهارت‌ها</a></li>
-          <li><a href="#contact" class="rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-brand-600 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white transition">ارتباط</a></li>
+          <li><a href="#about" class="rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-brand-600 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white transition">About</a></li>
+          <li><a href="#skills" class="rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-brand-600 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white transition">Skills</a></li>
+          <li><a href="#experience" class="rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-brand-600 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white transition">Experience</a></li>
+          <li><a href="#projects" class="rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-brand-600 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white transition">Projects</a></li>
+          <li><a href="#education" class="rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-brand-600 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white transition">Education</a></li>
+          <li><a href="#contact" class="rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-brand-600 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white transition">Contact</a></li>
         </ul>
 
         <div class="flex items-center gap-2">
           <!-- Theme toggle -->
-          <button id="theme-toggle" type="button" aria-label="تغییر تم" class="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-600 hover:text-brand-600 hover:border-brand-300 dark:border-white/10 dark:bg-white/5 dark:text-slate-300 dark:hover:text-white transition">
+          <button id="theme-toggle" type="button" aria-label="Toggle theme" class="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-600 hover:text-brand-600 hover:border-brand-300 dark:border-white/10 dark:bg-white/5 dark:text-slate-300 dark:hover:text-white transition">
             <svg class="h-5 w-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.36 6.36-1.42-1.42M7.05 7.05 5.64 5.64m12.72 0-1.41 1.41M7.05 16.95l-1.41 1.41M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/></svg>
             <svg class="h-5 w-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
           </button>
 
-          <a href="mailto:mirhosseinmousavi42@gmail.com" class="hidden sm:inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:-translate-y-0.5 transition">
-            تماس بگیرید
+          <a href="resume.pdf" download class="hidden sm:inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:-translate-y-0.5 transition">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            Resume
           </a>
 
           <!-- Mobile menu button -->
-          <button id="menu-btn" type="button" aria-label="منو" class="md:hidden grid h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
+          <button id="menu-btn" type="button" aria-label="Menu" class="md:hidden grid h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
             <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
           </button>
         </div>
@@ -138,10 +137,13 @@
 
       <!-- Mobile menu -->
       <div id="mobile-menu" class="md:hidden hidden mt-2 rounded-2xl border border-slate-200 bg-white/90 p-2 backdrop-blur dark:border-white/10 dark:bg-slate-900/90">
-        <a href="#about" class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/5">درباره من</a>
-        <a href="#skills" class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/5">مهارت‌ها</a>
-        <a href="#contact" class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/5">راه‌های ارتباطی</a>
-        <a href="mailto:mirhosseinmousavi42@gmail.com" class="mt-1 block rounded-lg bg-brand-600 px-4 py-3 text-center text-sm font-semibold text-white">ارسال ایمیل</a>
+        <a href="#about" class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/5">About</a>
+        <a href="#skills" class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/5">Skills</a>
+        <a href="#experience" class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/5">Experience</a>
+        <a href="#projects" class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/5">Projects</a>
+        <a href="#education" class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/5">Education</a>
+        <a href="#contact" class="block rounded-lg px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/5">Contact</a>
+        <a href="resume.pdf" download class="mt-1 block rounded-lg bg-brand-600 px-4 py-3 text-center text-sm font-semibold text-white">Download Resume</a>
       </div>
     </nav>
   </header>
@@ -152,42 +154,58 @@
       <!-- background decorations -->
       <div class="pointer-events-none absolute inset-0 -z-10">
         <div class="absolute inset-0 bg-grid text-slate-200/70 dark:text-white/[0.06] [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]"></div>
-        <div class="absolute -top-24 right-1/4 h-72 w-72 rounded-full bg-brand-400/30 blur-3xl dark:bg-brand-600/20"></div>
-        <div class="absolute top-10 left-1/4 h-72 w-72 rounded-full bg-violet-400/30 blur-3xl dark:bg-violet-700/20"></div>
+        <div class="absolute -top-24 left-1/4 h-72 w-72 rounded-full bg-brand-400/30 blur-3xl dark:bg-brand-600/20"></div>
+        <div class="absolute top-10 right-1/4 h-72 w-72 rounded-full bg-violet-400/30 blur-3xl dark:bg-violet-700/20"></div>
       </div>
 
       <div class="mx-auto max-w-6xl px-4">
         <div class="grid items-center gap-12 md:grid-cols-2">
           <!-- text -->
-          <div class="text-center md:text-right reveal">
+          <div class="text-center md:text-left reveal">
             <span class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-4 py-1.5 text-sm font-medium text-brand-700 dark:border-brand-500/20 dark:bg-brand-500/10 dark:text-brand-300">
               <span class="relative flex h-2 w-2">
                 <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
                 <span class="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
               </span>
-              آماده‌ی همکاری
+              Available for new opportunities
             </span>
 
             <h1 class="mt-6 text-4xl font-black leading-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white">
-              سلام، من <span class="bg-gradient-to-l from-brand-500 to-violet-500 bg-clip-text text-transparent">حسین موسوی</span> هستم
+              Hi, I'm <span class="bg-gradient-to-r from-brand-500 to-violet-500 bg-clip-text text-transparent">Mir Hossein Mousavi</span>
             </h1>
 
             <p class="mt-4 text-xl font-semibold text-slate-600 dark:text-slate-300">
-              طراح و برنامه‌نویس سایت
+              Backend Developer
             </p>
 
             <p class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-slate-500 dark:text-slate-400 md:mx-0">
-              مدتی هست در زمینه طراحی و برنامه‌نویسی سایت فعالیت می‌کنم؛ هدفم پیشرفت روزافزون در این زمینه و تحویل به‌موقع و باکیفیت پروژه‌هاست.
+              I build scalable, high-performance backend systems in <span class="font-semibold text-slate-700 dark:text-slate-200">Go</span> and <span class="font-semibold text-slate-700 dark:text-slate-200">Node.js</span> — from gRPC microservices and distributed data pipelines to lightning-fast search with Elasticsearch and reliable, fault-tolerant services.
             </p>
 
             <div class="mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start">
               <a href="mailto:mirhosseinmousavi42@gmail.com" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:-translate-y-0.5 transition">
                 <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z"/></svg>
-                ارسال ایمیل
+                Get in touch
               </a>
-              <a href="tel:09912485006" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3.5 text-sm font-semibold text-slate-700 hover:border-brand-300 hover:text-brand-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-200 dark:hover:text-white transition">
-                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 0 1 2-2h2.28a1 1 0 0 1 .95.68l1 3a1 1 0 0 1-.5 1.2L7.5 9.1a11 11 0 0 0 5.4 5.4l1.22-1.23a1 1 0 0 1 1.2-.5l3 1a1 1 0 0 1 .68.95V17a2 2 0 0 1-2 2A14 14 0 0 1 3 5Z"/></svg>
-                تماس تلفنی
+              <a href="resume.pdf" download class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3.5 text-sm font-semibold text-slate-700 hover:border-brand-300 hover:text-brand-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-200 dark:hover:text-white transition">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+                Download Resume
+              </a>
+            </div>
+
+            <!-- social row -->
+            <div class="mt-7 flex items-center justify-center gap-3 md:justify-start">
+              <!-- TODO: replace with your real GitHub URL -->
+              <a href="https://github.com/your-username" target="_blank" rel="noopener" aria-label="GitHub" class="grid h-11 w-11 place-items-center rounded-xl border border-slate-200 bg-white text-slate-600 hover:text-brand-600 hover:border-brand-300 dark:border-white/10 dark:bg-white/5 dark:text-slate-300 dark:hover:text-white transition">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.16-.02-2.1-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+              </a>
+              <!-- TODO: replace with your real LinkedIn URL -->
+              <a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener" aria-label="LinkedIn" class="grid h-11 w-11 place-items-center rounded-xl border border-slate-200 bg-white text-slate-600 hover:text-brand-600 hover:border-brand-300 dark:border-white/10 dark:bg-white/5 dark:text-slate-300 dark:hover:text-white transition">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.27V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+              </a>
+              <!-- TODO: replace with your real Telegram URL -->
+              <a href="https://t.me/your-username" target="_blank" rel="noopener" aria-label="Telegram" class="grid h-11 w-11 place-items-center rounded-xl border border-slate-200 bg-white text-slate-600 hover:text-brand-600 hover:border-brand-300 dark:border-white/10 dark:bg-white/5 dark:text-slate-300 dark:hover:text-white transition">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.91 3.79 20.3 20.84c-.25 1.21-.98 1.5-1.99.93l-5.5-4.07-2.66 2.57c-.3.3-.55.56-1.12.56l.4-5.65 10.27-9.28c.45-.4-.1-.62-.69-.22L6.27 13.97.7 12.23c-1.21-.38-1.23-1.21.27-1.8L22.33 2.04c1-.38 1.88.24 1.58 1.75Z"/></svg>
               </a>
             </div>
           </div>
@@ -197,10 +215,10 @@
             <div class="relative animate-float">
               <div class="absolute -inset-4 rounded-full bg-gradient-to-tr from-brand-500 to-violet-500 opacity-30 blur-2xl"></div>
               <div class="relative rounded-full bg-gradient-to-tr from-brand-500 to-violet-500 p-1.5 shadow-2xl">
-                <img src="assets/img/profile.jpg" alt="حسین موسوی" class="h-56 w-56 rounded-full object-cover sm:h-72 sm:w-72 ring-4 ring-white dark:ring-slate-900" />
+                <img src="assets/img/profile.jpg" alt="Mir Hossein Mousavi" class="h-56 w-56 rounded-full object-cover sm:h-72 sm:w-72 ring-4 ring-white dark:ring-slate-900" />
               </div>
-              <span class="absolute -bottom-2 right-4 rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-lg dark:bg-slate-800 dark:text-slate-200">
-                طرح و پیاده‌ساز سایت
+              <span class="absolute -bottom-2 left-4 rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-lg dark:bg-slate-800 dark:text-slate-200">
+                Go · Node.js · Microservices
               </span>
             </div>
           </div>
@@ -212,40 +230,50 @@
     <section id="about" class="py-20 sm:py-28">
       <div class="mx-auto max-w-5xl px-4">
         <div class="reveal mx-auto max-w-2xl text-center">
-          <p class="text-sm font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">معرفی</p>
-          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl dark:text-white">درباره من</h2>
+          <p class="text-sm font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Introduction</p>
+          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl dark:text-white">About Me</h2>
         </div>
 
         <div class="reveal mt-12 overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-sm sm:p-12 dark:border-white/10 dark:bg-white/[0.03]">
-          <p class="text-lg leading-loose text-slate-600 dark:text-slate-300">
-            سلام، من <span class="font-bold text-slate-900 dark:text-white">حسین موسوی</span> هستم. مدتی هست در زمینه طراحی و برنامه‌نویسی سایت فعالیت می‌کنم. هدفم این هست که روز به روز بتونم در این زمینه پیشرفت کنم و به همنوعانم کمک کنم، و در کنار آن کارهایی که بهم سپرده می‌شه را با کیفیت خوب و زمان‌بندی مناسب تحویل بدم.
+          <p class="text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+            I'm a <span class="font-bold text-slate-900 dark:text-white">Backend Developer</span> with 5+ years of experience designing and building reliable, high-performance systems. I work primarily with <span class="font-semibold text-slate-800 dark:text-slate-100">Go (Golang)</span> and <span class="font-semibold text-slate-800 dark:text-slate-100">Node.js</span>, and I specialize in microservices, distributed systems, and the data layer that keeps them fast and scalable.
+          </p>
+          <p class="mt-5 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+            Across my roles I've built gRPC-based microservices and RESTful APIs, indexed large datasets with Elasticsearch for near-instant search, sped up applications with Redis caching, and kept services healthy with Sentry error monitoring and Dockerized deployments. I care about clean, efficient, well-tested code and delivering dependable solutions on time.
           </p>
 
           <div class="mt-10 grid gap-4 sm:grid-cols-3">
             <div class="rounded-2xl bg-slate-50 p-5 text-center dark:bg-white/5">
+              <p class="text-3xl font-black text-brand-600 dark:text-brand-400">5+</p>
+              <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Years of experience</p>
+            </div>
+            <div class="rounded-2xl bg-slate-50 p-5 text-center dark:bg-white/5">
               <p class="text-3xl font-black text-brand-600 dark:text-brand-400">Go</p>
-              <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">زبان اصلی بک‌اند</p>
+              <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Primary language</p>
             </div>
             <div class="rounded-2xl bg-slate-50 p-5 text-center dark:bg-white/5">
-              <p class="text-3xl font-black text-brand-600 dark:text-brand-400">Back‑End</p>
-              <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">تمرکز تخصصی</p>
+              <p class="text-3xl font-black text-brand-600 dark:text-brand-400">Microservices</p>
+              <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Core specialty</p>
             </div>
-            <div class="rounded-2xl bg-slate-50 p-5 text-center dark:bg-white/5">
-              <p class="text-3xl font-black text-brand-600 dark:text-brand-400">On‑Time</p>
-              <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">تحویل به‌موقع</p>
-            </div>
+          </div>
+
+          <!-- languages -->
+          <div class="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
+            <span><span class="font-semibold text-slate-700 dark:text-slate-200">English</span> — Advanced</span>
+            <span class="hidden sm:inline text-slate-300 dark:text-slate-700">•</span>
+            <span><span class="font-semibold text-slate-700 dark:text-slate-200">Persian</span> — Native</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ================= SKILLS ================= -->
-    <section id="skills" class="relative py-20 sm:py-28">
+    <section id="skills" class="relative py-20 sm:py-28 bg-white/50 dark:bg-white/[0.015]">
       <div class="mx-auto max-w-6xl px-4">
         <div class="reveal mx-auto max-w-2xl text-center">
-          <p class="text-sm font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">تخصص‌ها</p>
-          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl dark:text-white">کارهای ارائه‌شده توسط من</h2>
-          <p class="mt-4 text-slate-500 dark:text-slate-400">لیستی از کارهایی که در آن‌ها فعالیت دارم به شرح زیر هست</p>
+          <p class="text-sm font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Tech Stack</p>
+          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl dark:text-white">Technical Skills</h2>
+          <p class="mt-4 text-slate-500 dark:text-slate-400">The tools and technologies I use to build and ship backend systems.</p>
         </div>
 
         <div id="skills-grid" class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -254,17 +282,70 @@
       </div>
     </section>
 
+    <!-- ================= EXPERIENCE ================= -->
+    <section id="experience" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-4xl px-4">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="text-sm font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Career</p>
+          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl dark:text-white">Work Experience</h2>
+          <p class="mt-4 text-slate-500 dark:text-slate-400">Where I've worked and what I built.</p>
+        </div>
+
+        <div id="experience-list" class="mt-14 space-y-6">
+          <!-- items injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="relative py-20 sm:py-28 bg-white/50 dark:bg-white/[0.015]">
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="text-sm font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Selected Work</p>
+          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl dark:text-white">Projects</h2>
+          <p class="mt-4 text-slate-500 dark:text-slate-400">A few systems I've designed and shipped in production.</p>
+        </div>
+
+        <div id="projects-grid" class="mt-14 grid gap-6 md:grid-cols-3">
+          <!-- cards injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section id="education" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-4xl px-4">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="text-sm font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Background</p>
+          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl dark:text-white">Education</h2>
+        </div>
+
+        <div class="reveal mt-12 flex flex-col gap-4 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm sm:flex-row sm:items-center sm:gap-6 dark:border-white/10 dark:bg-white/[0.03]">
+          <div class="grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lg shadow-brand-500/30">
+            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4 2 9l10 5 10-5-10-5Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 11v4.5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5V11M22 9v5"/></svg>
+          </div>
+          <div class="flex-1">
+            <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">B.Sc. in Software Engineering</h3>
+              <span class="text-sm font-medium text-brand-600 dark:text-brand-400">Sep 2015 – Jul 2019</span>
+            </div>
+            <p class="mt-1 text-slate-500 dark:text-slate-400">Buin Zahra Technical University</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= CONTACT ================= -->
-    <section id="contact" class="relative overflow-hidden py-20 sm:py-28">
+    <section id="contact" class="relative overflow-hidden py-20 sm:py-28 bg-white/50 dark:bg-white/[0.015]">
       <div class="pointer-events-none absolute inset-0 -z-10">
         <div class="absolute bottom-0 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-brand-400/20 blur-3xl dark:bg-brand-700/20"></div>
       </div>
 
       <div class="mx-auto max-w-6xl px-4">
         <div class="reveal mx-auto max-w-2xl text-center">
-          <p class="text-sm font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">ارتباط</p>
-          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl dark:text-white">راه‌های ارتباطی</h2>
-          <p class="mt-4 text-slate-500 dark:text-slate-400">از طریق راه‌های زیر با من در ارتباط باشید</p>
+          <p class="text-sm font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Get in touch</p>
+          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl dark:text-white">Let's Work Together</h2>
+          <p class="mt-4 text-slate-500 dark:text-slate-400">Open to backend and microservices roles. Feel free to reach out — I usually reply quickly.</p>
         </div>
 
         <div class="mt-14 grid gap-6 md:grid-cols-3">
@@ -273,17 +354,17 @@
             <div class="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lg shadow-brand-500/30 transition group-hover:scale-110">
               <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z"/></svg>
             </div>
-            <h3 class="mt-5 text-lg font-bold text-slate-900 dark:text-white">آدرس ایمیل</h3>
+            <h3 class="mt-5 text-lg font-bold text-slate-900 dark:text-white">Email</h3>
             <p dir="ltr" class="mt-2 text-sm text-slate-500 group-hover:text-brand-600 dark:text-slate-400 dark:group-hover:text-brand-400">mirhosseinmousavi42@gmail.com</p>
           </a>
 
           <!-- Phone -->
-          <a href="tel:09912485006" class="reveal group rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-xl dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-brand-500/40" style="transition-delay:.1s">
+          <a href="tel:+989912485006" class="reveal group rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-xl dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-brand-500/40" style="transition-delay:.1s">
             <div class="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lg shadow-brand-500/30 transition group-hover:scale-110">
               <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 0 1 2-2h2.28a1 1 0 0 1 .95.68l1 3a1 1 0 0 1-.5 1.2L7.5 9.1a11 11 0 0 0 5.4 5.4l1.22-1.23a1 1 0 0 1 1.2-.5l3 1a1 1 0 0 1 .68.95V17a2 2 0 0 1-2 2A14 14 0 0 1 3 5Z"/></svg>
             </div>
-            <h3 class="mt-5 text-lg font-bold text-slate-900 dark:text-white">شماره تماس</h3>
-            <p dir="ltr" class="mt-2 text-sm text-slate-500 group-hover:text-brand-600 dark:text-slate-400 dark:group-hover:text-brand-400">0991 248 5006</p>
+            <h3 class="mt-5 text-lg font-bold text-slate-900 dark:text-white">Phone</h3>
+            <p dir="ltr" class="mt-2 text-sm text-slate-500 group-hover:text-brand-600 dark:text-slate-400 dark:group-hover:text-brand-400">+98 991 248 5006</p>
           </a>
 
           <!-- Location -->
@@ -291,9 +372,28 @@
             <div class="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lg shadow-brand-500/30 transition group-hover:scale-110">
               <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-5.33-7-11a7 7 0 1 1 14 0c0 5.67-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
             </div>
-            <h3 class="mt-5 text-lg font-bold text-slate-900 dark:text-white">آدرس</h3>
-            <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">تهران، ایران‌خودرو</p>
+            <h3 class="mt-5 text-lg font-bold text-slate-900 dark:text-white">Location</h3>
+            <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Tehran, Iran</p>
           </div>
+        </div>
+
+        <!-- social row -->
+        <div class="reveal mt-10 flex flex-wrap items-center justify-center gap-3">
+          <!-- TODO: replace with your real GitHub URL -->
+          <a href="https://github.com/your-username" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:border-brand-300 hover:text-brand-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-200 dark:hover:text-white transition">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.16-.02-2.1-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+            GitHub
+          </a>
+          <!-- TODO: replace with your real LinkedIn URL -->
+          <a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:border-brand-300 hover:text-brand-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-200 dark:hover:text-white transition">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.27V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+            LinkedIn
+          </a>
+          <!-- TODO: replace with your real Telegram URL -->
+          <a href="https://t.me/your-username" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:border-brand-300 hover:text-brand-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-200 dark:hover:text-white transition">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.91 3.79 20.3 20.84c-.25 1.21-.98 1.5-1.99.93l-5.5-4.07-2.66 2.57c-.3.3-.55.56-1.12.56l.4-5.65 10.27-9.28c.45-.4-.1-.62-.69-.22L6.27 13.97.7 12.23c-1.21-.38-1.23-1.21.27-1.8L22.33 2.04c1-.38 1.88.24 1.58 1.75Z"/></svg>
+            Telegram
+          </a>
         </div>
       </div>
     </section>
@@ -303,46 +403,50 @@
   <footer class="border-t border-slate-200 py-10 dark:border-white/10">
     <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 sm:flex-row">
       <div class="flex items-center gap-3">
-        <span class="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-brand-500 to-violet-600 text-white font-extrabold shadow-lg shadow-brand-500/30">ح</span>
-        <span class="font-bold text-slate-800 dark:text-white">حسین موسوی</span>
+        <span class="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-brand-500 to-violet-600 text-white font-extrabold text-sm shadow-lg shadow-brand-500/30">MH</span>
+        <span class="font-bold text-slate-800 dark:text-white">Mir Hossein Mousavi</span>
       </div>
-      <p class="text-sm text-slate-500 dark:text-slate-400">طراحی و توسعه با ❤️ — تمامی حقوق محفوظ است.</p>
+      <p class="text-sm text-slate-500 dark:text-slate-400">© <span id="year"></span> Mir Hossein Mousavi · Built with Tailwind CSS.</p>
     </div>
   </footer>
 
   <!-- ================= SCRIPTS ================= -->
   <script>
-    // ---- Skills data ----
+    // ---- Skills data (grouped by category) ----
     const skills = [
       {
-        title: "طراحی اختصاصی بک‌اند",
-        tags: ["زبان Go"],
+        title: "Languages & Runtimes",
+        tags: ["Go (Golang)", "Node.js"],
         icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>',
       },
       {
-        title: "نگهداری موقت دیتا",
-        tags: ["سرویس کش", "Redis"],
-        icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M13 2 4.5 12.5h6L11 22l8.5-10.5h-6L13 2Z"/>',
-      },
-      {
-        title: "نگهداری دائمی دیتا",
-        tags: ["پایگاه داده رابطه‌ای", "غیررابطه‌ای"],
+        title: "Databases",
+        tags: ["PostgreSQL", "MySQL", "MongoDB", "ClickHouse"],
         icon: '<ellipse cx="12" cy="5" rx="8" ry="3"/><path stroke-linecap="round" stroke-linejoin="round" d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/>',
       },
       {
-        title: "استفاده از RestAPI",
-        tags: ["ارتباط با سرویس‌های خارجی"],
+        title: "Caching & Search",
+        tags: ["Redis", "Elasticsearch"],
+        icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M13 2 4.5 12.5h6L11 22l8.5-10.5h-6L13 2Z"/>',
+      },
+      {
+        title: "APIs & Communication",
+        tags: ["RESTful API", "gRPC", "Protobuf", "Message Brokers"],
         icon: '<circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
       },
       {
-        title: "RabbitMQ و Redis",
-        tags: ["ارتباط میان سرویس‌های داخلی"],
-        icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M4 7h11l-3-3m3 3-3 3M20 17H9l3-3m-3 3 3 3"/>',
+        title: "DevOps & Infrastructure",
+        tags: ["Docker", "Linux", "Nginx", "Git", "GitLab CI/CD"],
+        icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16"/><circle cx="8" cy="7" r="0.5"/>',
+      },
+      {
+        title: "Architecture & Tooling",
+        tags: ["Microservices", "Distributed Systems", "Background Jobs", "Task Scheduling", "Sentry", "Postman", "BloomRPC"],
+        icon: '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
       },
     ];
 
-    const grid = document.getElementById("skills-grid");
-    grid.innerHTML = skills.map((s, i) => `
+    document.getElementById("skills-grid").innerHTML = skills.map((s, i) => `
       <div class="reveal group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1.5 hover:border-brand-300 hover:shadow-2xl dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-brand-500/40" style="transition-delay:${i * 0.08}s">
         <div class="absolute -left-10 -top-10 h-32 w-32 rounded-full bg-brand-400/10 blur-2xl transition group-hover:bg-brand-400/20"></div>
         <div class="relative">
@@ -356,6 +460,115 @@
         </div>
       </div>
     `).join("");
+
+    // ---- Experience data ----
+    const experience = [
+      {
+        role: "Backend Developer",
+        company: "Andishe Computer",
+        period: "May 2023 – Present",
+        points: [
+          "Build and maintain gRPC microservices, designing Protobuf contracts and generating clients across multiple languages.",
+          "Improved scalability and search performance by indexing data with Elasticsearch for fast, reliable retrieval.",
+          "Developed task-scheduling and background-job workflows to automate recurring backend processes.",
+          "Containerized each service with Docker and tracked production errors with Sentry.",
+          "Wrote tests and validated gRPC endpoints with BloomRPC and Postman.",
+        ],
+        tags: ["Go", "gRPC", "Protobuf", "Elasticsearch", "Redis", "Docker", "Sentry"],
+      },
+      {
+        role: "Backend Developer (Go & Node.js)",
+        company: "Hami Pishgaman Tosee",
+        period: "Jan 2022 – Mar 2023",
+        points: [
+          "Developed and maintained a platform for buying and selling USDT with automated credit-card payments.",
+          "Improved system performance by clustering Docker services and adding Nginx as an API gateway.",
+          "Reduced latency with Redis caching and cut user-reported issues by resolving bugs tracked in Sentry.",
+          "Collaborated with product managers through Jira and managed releases on GitLab, backed by testing and documentation.",
+        ],
+        tags: ["Go", "Node.js", "Docker", "Nginx", "Redis", "Sentry", "GitLab", "Jira"],
+      },
+      {
+        role: "Backend Developer (Node.js)",
+        company: "Marvel Trade",
+        period: "Feb 2020 – Aug 2021",
+        points: [
+          "Built a web application for sharing trading-signal data with customers.",
+          "Improved search performance through database indexing.",
+          "Automated deployment pipelines with GitLab CI/CD to speed up releases and reduce manual work.",
+          "Refactored the codebase using design patterns and wrote documentation to support onboarding and collaboration.",
+        ],
+        tags: ["Node.js", "GitLab CI/CD", "Databases", "Design Patterns"],
+      },
+    ];
+
+    document.getElementById("experience-list").innerHTML = experience.map((e, i) => `
+      <div class="reveal rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:border-brand-300 hover:shadow-lg sm:p-8 dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-brand-500/40" style="transition-delay:${i * 0.08}s">
+        <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">${e.role}</h3>
+            <p class="text-brand-600 dark:text-brand-400 font-semibold">${e.company}</p>
+          </div>
+          <span class="inline-flex w-fit shrink-0 items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600 dark:bg-white/5 dark:text-slate-300">${e.period}</span>
+        </div>
+        <ul class="mt-5 space-y-2.5">
+          ${e.points.map(p => `
+            <li class="flex gap-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+              <svg class="mt-1 h-4 w-4 shrink-0 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg>
+              <span>${p}</span>
+            </li>`).join("")}
+        </ul>
+        <div class="mt-5 flex flex-wrap gap-2">
+          ${e.tags.map(t => `<span class="rounded-full bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700 dark:bg-brand-500/10 dark:text-brand-300">${t}</span>`).join("")}
+        </div>
+      </div>
+    `).join("");
+
+    // ---- Projects data (drawn from real production work) ----
+    const projects = [
+      {
+        title: "USDT Trading Platform",
+        tagline: "Crypto trading with automated payments",
+        desc: "A platform for buying and selling USDT, featuring automated credit-card payments, Redis caching for speed, and a Dockerized, Nginx-fronted architecture for reliability.",
+        context: "Hami Pishgaman Tosee",
+        tags: ["Go", "Node.js", "Redis", "Docker", "Nginx"],
+        icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
+      },
+      {
+        title: "Trading Signals Platform",
+        tagline: "Fast delivery of market signals",
+        desc: "A web app that shares trading-signal data with customers, with database indexing for fast search and a fully automated GitLab CI/CD deployment pipeline.",
+        context: "Marvel Trade",
+        tags: ["Node.js", "GitLab CI/CD", "Databases"],
+        icon: '<path stroke-linecap="round" stroke-linejoin="round" d="M3 17l6-6 4 4 8-8M21 7h-5M21 7v5"/>',
+      },
+      {
+        title: "gRPC Microservices & Search",
+        tagline: "Scalable service-to-service communication",
+        desc: "gRPC microservices with Protobuf contracts and Elasticsearch-powered indexing for near-instant data retrieval, plus scheduled background jobs and Sentry monitoring.",
+        context: "Andishe Computer",
+        tags: ["Go", "gRPC", "Protobuf", "Elasticsearch"],
+        icon: '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><path stroke-linecap="round" stroke-linejoin="round" d="M10 6.5h4a3.5 3.5 0 0 1 3.5 3.5v4"/>',
+      },
+    ];
+
+    document.getElementById("projects-grid").innerHTML = projects.map((p, i) => `
+      <div class="reveal group flex flex-col rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1.5 hover:border-brand-300 hover:shadow-2xl dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-brand-500/40" style="transition-delay:${i * 0.08}s">
+        <div class="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lg shadow-brand-500/30 transition group-hover:scale-110">
+          <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">${p.icon}</svg>
+        </div>
+        <h3 class="mt-6 text-xl font-bold text-slate-900 dark:text-white">${p.title}</h3>
+        <p class="mt-1 text-sm font-medium text-brand-600 dark:text-brand-400">${p.tagline}</p>
+        <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300">${p.desc}</p>
+        <p class="mt-4 text-xs font-medium uppercase tracking-wide text-slate-400 dark:text-slate-500">${p.context}</p>
+        <div class="mt-3 flex flex-wrap gap-2">
+          ${p.tags.map(t => `<span class="rounded-full bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700 dark:bg-brand-500/10 dark:text-brand-300">${t}</span>`).join("")}
+        </div>
+      </div>
+    `).join("");
+
+    // ---- Footer year ----
+    document.getElementById("year").textContent = new Date().getFullYear();
 
     // ---- Theme toggle ----
     document.getElementById("theme-toggle").addEventListener("click", () => {

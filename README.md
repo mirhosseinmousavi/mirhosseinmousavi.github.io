@@ -1,36 +1,37 @@
-# رزومه حسین موسوی — Hossein Mousavi · Resume
+# Mir Hossein Mousavi — Backend Developer · Portfolio
 
-A clean, fast, single-page personal resume built with **Tailwind CSS**.
-RTL (Persian), light/dark mode, fully responsive, zero build step.
+A clean, fast, single-page developer portfolio built with **Tailwind CSS**.
+English (LTR), light/dark mode, fully responsive, zero build step.
 
-🔗 **Live:** https://<your-username>.github.io/<repo-name>/
+🔗 **Live:** https://mirhosseinmousavi.com
 
 ## ✨ Features
 
 - Single self-contained `index.html` — no Node, no build, no framework
-- Tailwind CSS via Play CDN with a custom theme (brand colors, Kalameh font)
+- Tailwind CSS via Play CDN with a custom theme (brand colors, Inter font)
 - Light / dark mode with system-preference detection + persistence (no flash)
-- RTL Persian layout with the locally-hosted **Kalameh** webfont
 - Scroll-reveal animations, glassmorphism navbar, responsive mobile menu
-- Sections: Hero · About · Skills · Contact
+- Sections: Hero · About · Skills · Experience · Projects · Education · Contact
+- Downloadable resume (`resume.pdf`)
 
 ## 📁 Structure
 
 ```
 index.html          ← the entire site
+resume.pdf          ← downloadable resume
 assets/
-  fonts/            ← Kalameh webfont (woff2 + woff)
   img/profile.jpg   ← profile photo
 favicon.ico · apple-icon.png · manifest.json
 .nojekyll           ← lets GitHub Pages serve all files as-is
+CNAME               ← custom domain (mirhosseinmousavi.com)
 ```
 
 ## 🚀 Publish on GitHub Pages
 
-1. Create a repo and push this folder:
+1. Commit and push this folder:
    ```bash
    git add .
-   git commit -m "feat: new Tailwind resume"
+   git commit -m "feat: English backend-developer portfolio"
    git push -u origin main
    ```
 2. On GitHub: **Settings → Pages → Build and deployment**
@@ -40,11 +41,15 @@ favicon.ico · apple-icon.png · manifest.json
 
 ## ✏️ Editing content
 
-All text lives in `index.html`:
+All content lives in `index.html`:
 
 - **Name / title / about** — in the Hero and About `<section>`s.
 - **Skills** — edit the `skills` array in the `<script>` near the bottom.
-- **Contact** — email/phone/address in the Contact `<section>`.
+- **Experience** — edit the `experience` array.
+- **Projects** — edit the `projects` array.
+- **Contact** — email/phone/location in the Contact `<section>`.
+- **Social links** — search for `TODO:` to find the GitHub / LinkedIn / Telegram
+  placeholder URLs and replace them with your real profiles.
 
 ## 🎨 Notes
 
